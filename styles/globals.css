@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply px-4 sm:px-8;
+    background-color: #050607;
+    color: #fff;
+  }
+
+  section {
+    @apply my-2 md:my-4 lg:my-8 xl:my-12;
+  }
+
+  h1 {
+    @apply mb-2 md:mb-4 lg:mb-8 xl:mb-12 uppercase text-xl lg:text-3xl xl:text-[40px];
+  }
+}
+
+@layer components {
+  .df {
+    @apply flex items-center gap-4;
+  }
+}
+
+.nav-bar.active {
+  padding: 1rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  background-color: #000;
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+}
+
+.nav-bar.active .nav-item-1,
+.nav-bar.active .nav-search,
+.nav-bar.active .nav-item-last {
+  display: none;
+}
+
+.nav-bar.active .nav-item-2,
+.nav-bar.active .nav-item-3 {
+  display: block;
+}
+
+.nav-bar.active .nav-item-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-search {
+  border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.nav-search input {
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.nav-search input:focus {
+  outline: none;
+}
+
+.circle-wrapper {
+  background-image: url(/assets/circle/full.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.discord-bg {
+  background-image: url(/assets/discord/web_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper {
+  padding-bottom: 2.5rem !important;
+}
+
+.swiper-pagination-bullet{
+  background: #fff !important;
+  opacity: .8 !important;
+}
+
+.swiper-pagination-bullet-active{
+  background: #00AC4F !important;
+  opacity: 1 !important;
+}
